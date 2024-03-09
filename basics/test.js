@@ -1,1 +1,30 @@
-console.log("Shree Shivay Namstubhyam");
+// console.log("Shree Shivay Namstubhyam");
+// let name="nitinyadav";
+// let a="123";
+// console.log(name);
+// console.log(typeof "nitin");
+// console.log(typeof undefined);
+// console.log(typeof null);
+// console.log(a);
+// console.log(typeof a);
+// let c=Number(a);
+// console.log(c);
+// console.log(typeof c);
+// let b=1;
+// let d=Boolean(b);
+// console.log(d);
+// console.log(+true);
+// let x=10;
+// ++x;
+// console.log(x);
+// let y=10;
+// // console.log(++y);
+// console.log(y++);
+// console.log("2"===2);
+const id=Symbol("nitin");
+const id1=Symbol("nitin");
+console.log((id===id1));
+const bigNumber=123343213445222222222222222222222n;
+console.log(bigNumber);
+
+
