@@ -39,14 +39,18 @@
 // obj1.name="atul"
 // console.log(obj);
 // console.log(obj1);
-let nam="Nitin";
-let Rollno="80";
-console.log(`My Name is ${nam} and my Roll no is ${Rollno}`);
-const gamename= new String("Nitin");
-console.log(gamename[0]);
-console.log(gamename.length);
-console.log(gamename.toUpperCase());
-console.log(gamename.charAt(2));
-console.log(gamename.substring(0,2));
-console.log(gamename.slice(-2,0));
-
+// let nam="Nitin";
+// let Rollno="80";
+// console.log(`My Name is ${nam} and my Roll no is ${Rollno}`);
+// const gamename= new String("Nitin");
+// console.log(gamename[0]);
+// console.log(gamename.length);
+// console.log(gamename.toUpperCase());
+// console.log(gamename.charAt(2));
+// console.log(gamename.substring(0,2));
+// console.log(gamename.slice(-2,0));
+// let str="  nitin   ";
+// console.log(str.trim());
+// const url="nitin=yadav"
+// console.log(url.replace("=","-"));
+// console.log(url.includes("nitin"));
