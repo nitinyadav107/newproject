@@ -20,8 +20,31 @@
 // console.log(arr);
 // console.log(arr.splice(0,3));
 // console.log(arr);
-let arr=[1,2,3,4,5,6];
-console.log(arr.slice(1,3));
-console.log(arr);
-console.log(arr.splice(1,3));
-console.log(arr);
+// let arr=[1,2,3,4,5,6];
+// console.log(arr.slice(1,3));
+// console.log(arr);
+// console.log(arr.splice(1,3));
+// console.log(arr);
+
+// const a=["nitin","prashant"];
+// const b=["A","B"];
+// a.push(b);
+// console.log(a);
+// a.concat(b);
+// console.log(a);
+// const c=a.concat(b);
+// console.log(c);
+// const e=[...a,...b];
+// console.log(e);
+// const f=[1,2,3,[4,3,[2,3,4]],[2,3]];
+// const g=f.flat(Infinity);
+// console.log(g);
+// console.log(Array.isArray("Nitin"));
+// // console.log(Array.from("Nitin"));
+// console.log(Array.from({name:"Nitin"}));
+let a=12;
+let b=1;
+let c=4;
+
+
+console.log(Array.of(a,b,c));
