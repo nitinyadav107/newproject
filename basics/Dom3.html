@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="lang">
+        <li>python</li>
+    </ul>
+
+</body>
+<script>
+    function addelement(element) {
+        // const li=document.createElement('li');
+        // li.innerHTML=`${element}`
+        // document.querySelector(".lang").appendChild(li);
+        // }
+        // addelement("java");
+        function optimalelement(element) {          //optimised approach
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(element));
+            document.querySelector(".lang").appendChild(li);
+        }
+        optimalelement("C++");
+    }
+    //edit
+    const secondlang = document.querySelector("li:nth-child(1)");
+    // secondlang.innerHTML="mojo";
+    const newli = document.createElement('li');
+    newli.textContent = "mojo";
+    secondlang.replaceWith(newli);
+
+</script>
+
+</html>
