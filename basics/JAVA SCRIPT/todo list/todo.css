@@ -1,0 +1,19 @@
+
+body{
+    text-align: center;
+    background-color: cadetblue;
+    
+}
+#item-container{
+    
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    justify-content: center;
+}
+.main{
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    justify-content: center;
+    gap: 5px;
+}
+

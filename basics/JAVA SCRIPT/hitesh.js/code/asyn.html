@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Nitin Yadav</h1>
+    <button id="button">Button</button>
+
+</body>
+<script>
+    const fun = function () {
+        const h1 = document.querySelector('h1');
+        h1.innerHTML = `NITIN YADAV`;
+    }
+    const time = setTimeout(fun, 2000);
+    document.querySelector('#button').addEventListener('click', function () {
+        clearTimeout(time);
+    })
+
+</script>
+
+</html>

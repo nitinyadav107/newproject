@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strong Paper Seizer</title>
+    <!-- You may need to adjust the path to your CSS file -->
+    <link rel="stylesheet" href="Strongpaperseizer.css">
+</head>
+<body>
+    
+    <div>
+        <h1>Strong Paper Seizer</h1>
+        <button class="button" onclick="play('Strong')"><img class="strong" src="Strong.jpg" alt="Strong"></button>
+       <button class="button" onclick="play('Paper')"><img class="strong" src="paper.jpg" alt="paper"></button>
+       <button class="button" onclick="play('Seizer')"><img class="strong" src="scissors.jpg" alt="scissor"></button>
+       <button class="button" onclick="resetScore()"><img class="strong" src="reset.jpg" alt="reset"></button>
+    </div>
+    
+    <h3 id="your-choice"></h3>
+    <h3 id="computer-choice"></h3>
+    <h3 id="result"></h3>
+    <h3 id="score"></h3>
+    
+    <script>
+        let scoreStr = localStorage.getItem('Score');
+        let score;
+
+        function resetScore() {
+            score = {
+                win: 0,
+                lose: 0,
+                tie: 0
+            };
+            localStorage.setItem('Score', JSON.stringify(score));
+            updateScoreDisplay();
+        }
+
+        function updateScoreDisplay() {
+            document.querySelector('#score').innerText = `Win: ${score.win}, Lose: ${score.lose}, Tie: ${score.tie}`;
+        }
+
+        function computerchoice() {
+            let random = Math.random() * 3;
+            if (random >= 0 && random < 1) {
+                return 'Strong';
+            } else if (random >= 1 && random < 2) {
+                return 'Paper';
+            } else {
+                return 'Seizer';
+            }
+        }
+
+        function play(userchoice) {
+            if (!score) {
+                resetScore();
+            }
+            let computerchoose = computerchoice();
+            let result = getResult(userchoice, computerchoose);
+            
+            document.querySelector('#your-choice').innerText = `You choose ${userchoice}`;
+            document.querySelector('#computer-choice').innerText = `Computer chooses ${computerchoose}`;
+            document.querySelector('#result').innerText = `${result}`;
+            
+            localStorage.setItem('Score', JSON.stringify(score));
+            updateScoreDisplay();
+        }
+
+        function getResult(userchoice, computerchoice) {
+            if (userchoice === 'Strong') {
+                if (computerchoice === 'Strong') {
+                    score.tie++;
+                    return 'It\'s a draw!';
+                } else if (computerchoice === 'Seizer') {
+                    score.win++;
+                    return 'You win this game!';
+                } else {
+                    score.lose++;
+                    return 'You lose!';
+                }
+            } else if (userchoice === 'Paper') {
+                if (computerchoice === 'Paper') {
+                    score.tie++;
+                    return 'It\'s a draw!';
+                } else if (computerchoice === 'Seizer') {
+                    score.lose++;
+                    return 'You lose!';
+                } else {
+                    score.win++;
+                    return 'You win this game!';
+                }
+            } else if (userchoice === 'Seizer') {
+                if (computerchoice === 'Seizer') {
+                    score.tie++;
+                    return 'It\'s a draw!';
+                } else if (computerchoice === 'Strong') {
+                    score.lose++;
+                    return 'You lose!';
+                } else {
+                    score.win++;
+                    return 'You win this game!';
+                }
+            }
+        }
+
+        // Initialize or update score
+        if (scoreStr) {
+            score = JSON.parse(scoreStr);
+            updateScoreDisplay();
+        } else {
+            resetScore();
+        }
+    </script>
+</body>
+</html>

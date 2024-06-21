@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(52, 51, 51);">
+    <ul class="lang">
+        <li>Java</li>
+    </ul>
+
+</body>
+<script>
+    // function AddElement(lang) {
+    //     let li = document.createElement('li');
+    //     li.innerHTML = `${lang}`;
+    //     document.querySelector('.lang').appendChild(li);
+    // }
+    // AddElement("Python");
+    function optimalApproach(lang) {
+        let li = document.createElement('li')
+        li.appendChild(document.createTextNode(lang));
+        document.querySelector('.lang').appendChild(li);
+    }
+    optimalApproach("python");
+    // edit
+    let x = document.querySelector("li:nth-child(2)")
+    let newli = document.createElement("li");
+    newli.innerText = "mojo";
+    x.replaceWith(newli);
+    //edit
+    const firstlang = document.querySelector("li:first-child")
+    firstlang.outerHTML = '<li> Typescript</li>'
+    //remove
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+
+
+</script>
+
+</html>

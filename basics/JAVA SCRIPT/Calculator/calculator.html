@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="calbox">
+        <input class="input" type="text">
+    <div class="button_cont">
+        <button class="but" onclick="st+='1'; document.querySelector('.input').value=st;"><h3>1</h3></button>
+        <button class="but" onclick="st+='2'; document.querySelector('.input').value=st;"><h3>2</h3></button>
+        <button class="but" onclick="st+='3'; document.querySelector('.input').value=st;"><h3>3</h3></button>
+        <button class="but"  onclick="st=''; document.querySelector('.input').value=st;"><h3>C</h3></button>
+        <button class="but" onclick="st+='4'; document.querySelector('.input').value=st;"><h3>4</h3></button>
+        <button class="but" onclick="st+='5'; document.querySelector('.input').value=st;"><h3>5</h3></button>
+        <button class="but" onclick="st+='6'; document.querySelector('.input').value=st;"><h3>6</h3></button>
+        <button class="but"  onclick="st+='+'; document.querySelector('.input').value=st;"><h3>+</h3></button>
+        <button class="but" onclick="st+='7'; document.querySelector('.input').value=st;"><h3>7</h3></button>
+        <button class="but" onclick="st+='8'; document.querySelector('.input').value=st;"><h3>8</h3></button>
+        <button class="but" onclick="st+='9'; document.querySelector('.input').value=st;"><h3>9</h3></button>
+        <button class="but"  onclick="st+='-'; document.querySelector('.input').value=st;"><h3>-</h3></button>
+        <button class="but" onclick="st+='0'; document.querySelector('.input').value=st;"><h3>0</h3></button>
+        <button class="but" onclick="st+='*'; document.querySelector('.input').value=st;"><h3>*</h3></button>
+        <button class="but" onclick="st+='/'; document.querySelector('.input').value=st;"><h3>/</h3></button>
+        <button class="but" onclick="let result=eval(st); st=result; document.querySelector('.input').value=st;"><h3>=</h3></button>
+        <button class="but" onclick="st+='.'; document.querySelector('.input').value=st;"><h3>.</h3></button>
+    </div>
+</div>
+    <script>
+        let st=''
+        document.querySelector('.input').value=st;
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(66, 102, 246);
+    text-align: center;
+}
+
+.calculate {
+    margin-left: 35px;
+    margin-top: 5px;
+}
+
+.result {
+    margin-top: 5px;
+}

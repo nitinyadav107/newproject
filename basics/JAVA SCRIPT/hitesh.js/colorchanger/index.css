@@ -1,0 +1,30 @@
+body {
+    /* background-color: rgb(90, 106, 120); */
+    margin-top: 100px;
+    text-align: center;
+    border-width: 12px;
+}
+
+#violet {
+    background-color: violet;
+    height: 50px;
+    width: 50px;
+}
+
+#blue {
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+}
+
+#yellow {
+    background-color: yellow;
+    height: 50px;
+    width: 50px;
+}
+
+#green {
+    background-color: green;
+    height: 50px;
+    width: 50px;
+}

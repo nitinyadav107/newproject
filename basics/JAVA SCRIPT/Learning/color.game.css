@@ -1,0 +1,28 @@
+.color{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(246, 244, 244);
+    border: 2px solid black;
+    margin-top: 100px;
+    margin-left: 150px;
+   
+}
+.box{
+    height: 600px;
+    width: 400px;
+    background-color: blanchedalmond;
+    border: 5px solid black;
+    margin-left:550px ;
+
+}
+.start{
+    width: 60px;
+    height: 30px;
+    margin-top: 31px;
+    margin-left: 171px;
+    background-color: aquamarine;
+
+}
+.start :active{
+    
+}
